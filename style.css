@@ -1,0 +1,524 @@
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+body {
+  width: auto;
+  height: auto;
+  background: var(--Pure-White, #fff);
+}
+
+.blue-gradient-left {
+  width: 978px;
+  height: 737px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 35px 35px;
+  background: var(
+    --Gradient-1,
+    linear-gradient(290deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%)
+  );
+  left: 24px;
+  right: 438px;
+  bottom: 2040px;
+}
+
+.main-heading {
+  display: flex;
+  width: 564px;
+  height: 271px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+  padding-top: 266px;
+  padding-left: 116px;
+  padding-bottom: 331px;
+  padding-right: 298px;
+}
+
+.bmi-heading {
+  align-self: stretch;
+  color: var(--Gunmetal, #253347);
+
+  /* Heading XL */
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 70.4px */
+  letter-spacing: -3.2px;
+}
+
+.bmi-heading-bio {
+  width: 465px;
+  color: var(--Dark-Electric-Blue, #5e6e85);
+
+  /* Body M */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.bmi-calculation {
+  display: flex;
+  width: 564px;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 16px;
+  background: var(--Pure-White, #fff);
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  position: absolute; /* Positioned absolutely relative to its nearest positioned ancestor */
+  top: 167px;
+  left: 712px;
+  bottom: 86px;
+  right: 298px;
+}
+
+.enter-details {
+  color: var(--Gunmetal, #253347);
+
+  /* Heading M */
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+
+.options {
+  color: var(--Gunmetal, #253347);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.option-frame {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1 0 0;
+  width: 238px;
+  height: 31px;
+  margin-right: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.custom-radio {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* This creates space between the SVG and the label text */
+}
+
+.custom-radio svg:nth-of-type(2) {
+  display: none; /* Hide the selected state SVG initially */
+  display: flex;
+  align-items: center; /* Align SVG and text vertically */
+  margin-right: 16px;
+  gap: 10px;
+}
+
+input[type="radio"]:checked + label svg:nth-of-type(2) {
+  display: block; /* Show the selected state SVG when the radio button is checked */
+  outline: none; /* Removes the outline */
+  margin: 0; /* Ensures no additional margin is applied */
+  padding: 0;
+}
+
+input[type="radio"]:checked + label svg:first-of-type {
+  display: none; /* Hide the unselected state SVG when the radio button is checked */
+  outline: none; /* Removes the outline */
+  margin: 0; /* Ensures no additional margin is applied */
+  padding: 0;
+}
+
+input[type="radio"]:not(:checked) + label svg:first-of-type {
+  display: block; /* Show the unselected state SVG when the radio button is not checked */
+  outline: none; /* Removes the outline */
+  margin: 0; /* Ensures no additional margin is applied */
+  padding: 0;
+}
+
+input[type="radio"]:not(:checked) + label svg:nth-of-type(2) {
+  display: none; /* Hide the selected state SVG when the radio button is not checked */
+  outline: none; /* Removes the outline */
+  margin: 0; /* Ensures no additional margin is applied */
+  padding: 0;
+}
+
+
+
+.height-or-weight {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.hw-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.height_input,
+.weight_input {
+  position: relative;
+}
+
+.height_input input[type="text"],
+.weight_input input[type="text"] {
+  padding: 20px 24px 20px 24px; /* Adjusted padding */
+  border-radius: 12px;
+  border: 1px solid #d8e2e7;
+  background: var(--Pure-White, #fff);
+  position: relative;
+  font-size: 24px;
+  display: flex;
+  gap: 24px;
+  width: 200px;
+  height: auto;
+}
+
+.hw-frame ::placeholder {
+  color: #5e6e85;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+
+.Height,
+.Weight {
+  color: #5e6e85;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.hw-frame .static-value {
+  position: absolute;
+  display: block;
+  color: var(--Blue, #345ff6);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.height_input input[type="text"]::after,
+.weight_input input[type="text"]::after {
+  content: "cm";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #5e6e85;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+
+.empty-result .bmi-result{
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 16px 999px 999px 16px;
+  background: linear-gradient(90deg, #345ff6 0%, #587dff 100%);
+}
+
+.empty-result label {
+  color: var(--Pure-White, #fff);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+
+.empty-result-bio {
+  color: var(--Pure-White, #fff);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* SECOND PANEL*/
+
+.result-meaning {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align the items to the start */
+  width: 100%;
+  height: 600px;
+  padding-top: 60px; /* Add padding to ensure content does not overlap with anything above */
+}
+
+.man-eating {
+  width: 468px;
+  height: 533px;
+  position: absolute;
+  left: 148px;
+  top: 60px;
+  z-index: 2; /* Above the rectangle */
+}
+
+.rectangle {
+  width: 564px;
+  height: 388px;
+  border-radius: 32px;
+  background: #e7f5fe;
+  position: absolute;
+  left: 100px;
+  top: 205px;
+  z-index: 1; /* Below the .man-eating image */
+}
+
+.bmi-result-text {
+  width: 465px; /* Set width for the text container */
+  position: absolute; /* Absolutely position the text within the parent container */
+  left: 836px; /* 736px from the left as specified */
+  top: 205px; /* Align with the top of the rectangle */
+  z-index: 3; /* Ensure it's above the other elements */
+  gap: 35px;
+}
+
+.bmi-result-text label {
+  color: var(--Gunmetal, #253347);
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -2.4px;
+  padding-bottom: 35px;
+}
+
+.bmi-meaning-long {
+  color: var(--Dark-Electric-Blue, #5e6e85);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 35px;
+}
+
+/* THIRD PANEL*/
+
+.third-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 402px;
+  border-radius: 35px;
+  /* Use RGBA for gradient stops to control opacity */
+  background: linear-gradient(
+    290deg,
+    rgba(214, 230, 254, 0.25) 0%,
+    rgba(214, 252, 254, 0) 100%
+  );
+}
+
+.third-panel > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 60px;
+}
+
+.third-panel img {
+  align-self: flex-start;
+  margin-top: 70px;
+}
+
+.third-panel label {
+  color: #253347; /* Gunmetal color */
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.third-content {
+  width: 365px;
+  color: #5e6e85; /* Dark Electric Blue color */
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/*FOURTH PANEL*/
+
+.fourth-panel {
+  width: 100%;
+  background: var(--Pure-White, #fff);
+}
+
+.main {
+  display: flex;
+  width: 564px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+  margin-left: 140px;
+  margin-top: 160px;
+}
+
+.heading-1 {
+  align-self: stretch;
+  color: var(--Gunmetal, #253347);
+
+  /* Heading L */
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 52.8px */
+  letter-spacing: -2.4px;
+}
+
+.Limitations-long {
+  align-self: stretch;
+  color: var(--Dark-Electric-Blue, #5e6e85);
+
+  /* Body M */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.box {
+  display: flex;
+  width: 365px;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-radius: 16px;
+  background: var(--Pure-White, #fff);
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+}
+
+.h-2 {
+  flex: 1 0 0;
+  color: var(--Gunmetal, #253347);
+
+  /* Heading S */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+
+.h2-content {
+  align-self: stretch;
+  color: var(--Dark-Electric-Blue, #5e6e85);
+
+  /* Body M */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  margin-top: 32px;
+}
+
+.boxes {
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.sec-1 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.sec-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-left: 440px;
+}
+
+.sec-3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-left: 300px;
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+
+.box-gender {
+  display: flex;
+  width: 365px;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-radius: 16px;
+  background: var(--Pure-White, #fff);
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  margin-top: 160px;
+  margin-left: 90px;
+}
+
+.frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
