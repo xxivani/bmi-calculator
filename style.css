@@ -251,7 +251,7 @@ input[type="radio"]:not(:checked) + label svg:nth-of-type(2) {
   letter-spacing: -1.2px;
 }
 
-.empty-result .bmi-result{
+.empty-result {
   display: flex;
   padding: 32px;
   flex-direction: column;
